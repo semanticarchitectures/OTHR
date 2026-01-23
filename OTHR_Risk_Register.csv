@@ -1,0 +1,112 @@
+# Arctic OTHR Risk Assessment Framework
+# UNCLASSIFIED // PUBLIC RELEASE
+# Version 1.0 Framework - January 21, 2026
+#
+# RISK RATING METHODOLOGY:
+# Likelihood: 1=Rare 2=Unlikely 3=Possible 4=Likely 5=Almost Certain
+# Impact: 1=Insignificant 2=Minor 3=Moderate 4=Major 5=Severe
+# Risk Score = Likelihood × Impact (1-25 scale)
+# Priority: 15-25=Critical 10-14=High 5-9=Medium 1-4=Low
+
+Risk ID,Risk Category,Risk Description,Likelihood (1-5),Impact (1-5),Risk Score,Priority,Mitigation Strategy,Mitigation Owner,Status,Notes
+R001,Technical,Arctic ionospheric modeling inaccuracy affects performance,4,4,16,Critical,1) Deploy comprehensive ionospheric monitoring network 2) Use E-CHAIM or A-CHAIM models validated for Arctic 3) Extensive site ionospheric characterization 4) Adaptive frequency management,Chief Engineer,OPEN,Historical data shows standard models fail at high latitudes
+R002,Technical,Permafrost instability causes foundation failure,3,5,15,Critical,1) Extensive geotechnical surveys 2) Thermosyphon foundation design 3) Continuous monitoring systems 4) Over-engineer foundation to 2x safety factor,Civil Engineer,OPEN,Antenna arrays require stable foundations; movement unacceptable
+R003,Technical,Extreme cold degrades electronic performance,4,3,12,High,1) Environmental chambers for critical electronics 2) Cold-weather rated components 3) Redundant heating systems 4) Extensive environmental testing,Systems Engineer,OPEN,-50°C operational requirement drives design
+R004,Technical,HF interference from commercial users,3,4,12,High,1) Dynamic frequency management system 2) Spectrum monitoring and deconfliction 3) Coordination with FAA/FCC 4) Real-time interference detection,Frequency Manager,OPEN,Arctic has heavy aviation HF use (polar routes)
+R005,Technical,Auroral clutter reduces detection performance,5,3,15,Critical,1) Adaptive clutter rejection algorithms 2) Multiple frequency diversity 3) Accept degraded performance during storms 4) Space weather prediction integration,Algorithm Lead,OPEN,20% of time auroral; 30-50% performance hit
+R006,Technical,Multipath propagation causes bearing errors,4,3,12,High,1) Advanced coordinate registration algorithms 2) Multi-site triangulation 3) Ionospheric correction models 4) Quality metrics on tracks,Signal Processing Lead,OPEN,Inherent to OTHR; mitigation not elimination
+R007,Technical,Software integration complexity causes delays,4,4,16,Critical,1) Incremental integration approach 2) Continuous integration/testing 3) Leverage existing JORN code 4) Government software IP rights,SW Development Lead,OPEN,Multi-site coordination is complex
+R008,Technical,Long-lead HF components unavailable,3,4,12,High,1) Early procurement of critical items 2) Multiple supplier qualification 3) Inventory buffer 4) Alternative component qualification,Logistics Manager,OPEN,Specialized HF components; limited suppliers
+R009,Schedule,Environmental review delays exceed plan,4,4,16,Critical,1) Early stakeholder engagement 2) Parallel EIS preparation 3) Scope to avoid litigation triggers 4) Congressional pre-approval if possible,Program Manager,OPEN,NEPA reviews frequently extend beyond plan
+R010,Schedule,Indigenous consultation delays or blocks sites,4,5,20,Critical,1) Early and continuous tribal engagement 2) Economic benefit sharing 3) Employment opportunities 4) Cultural sensitivity training 5) Government-to-government consultation,PM + Stakeholder Lead,OPEN,Land rights and sovereignty issues critical
+R011,Schedule,Short construction season limits progress,5,3,15,Critical,1) Pre-position materials during winter 2) Maximize crew efficiency 3) Consider modular construction 4) Plan for 2-season builds,Construction Manager,OPEN,May-October only; ice roads limit access
+R012,Schedule,Weather delays site access and work,4,3,12,High,1) Weather contingency in schedule 2) Pre-position supplies 3) All-weather access roads where possible 4) Satellite construction monitoring,Construction Manager,OPEN,Helicopter-dependent sites very weather sensitive
+R013,Schedule,Funding gaps delay program,3,5,15,Critical,1) Multi-year appropriations 2) Strong Congressional support 3) Cost as independent variable 4) Annual budget advocacy,Program Manager,OPEN,Defense budgets under pressure
+R014,Cost,Arctic site preparation costs exceed estimates,4,4,16,Critical,1) Detailed site surveys before commitment 2) Arctic-experienced contractors 3) 2.5x cost multiplier in estimates 4) Select most accessible sites,Cost Estimator,OPEN,Current estimate uses 2.5x multiplier
+R015,Cost,Infrastructure development costs underestimated,3,4,12,High,1) Power grid distance analysis 2) Satellite vs fiber cost comparison 3) Government infrastructure partnerships 4) Cost reserve allocation,Infrastructure Lead,OPEN,Remote power and comms very expensive
+R016,Cost,Exchange rate fluctuations (if JORN tech),3,3,9,Medium,1) Currency hedging strategies 2) Fixed-price contract in USD 3) Domestic content requirements 4) Technology transfer licensing,Contracts Manager,OPEN,JORN baseline assumes Australian partnership
+R017,Cost,Scope creep inflates requirements,4,4,16,Critical,1) Firm requirements baseline 2) Configuration control board 3) Cost-capability trades 4) Defer enhancements to spirals,Requirements Manager,OPEN,Threat evolution drives requirement growth
+R018,Performance,Detection performance below requirement,3,5,15,Critical,1) Conservative performance estimates 2) Modeling &amp; simulation validation 3) Prototype testing before commitment 4) Performance specifications with margins,Test Director,OPEN,Arctic environment less characterized than mid-latitudes
+R019,Performance,False alarm rate unacceptable high,3,4,12,High,1) Advanced clutter models 2) CFAR algorithm optimization 3) Track quality metrics 4) Operator training,Algorithm Lead,OPEN,Ground clutter and aurora create false targets
+R020,Performance,NORAD interface incompatible,2,5,10,High,1) Early interface definition 2) Interface Control Documents 3) Prototype integration testing 4) NORAD liaison assignment,Integration Manager,OPEN,Link-16 or equivalent assumed
+R021,Programmatic,Competing budget priorities,3,4,12,High,1) Strong operational need justification 2) NORAD champion 3) Allied burden sharing (Canada) 4) Phased funding approach,Program Manager,OPEN,Many NORAD modernization programs compete
+R022,Programmatic,Technology source (US vs Australia),3,3,9,Medium,1) Technology comparison trades 2) ITAR compliance planning 3) Domestic content maximization 4) IP rights negotiation,Program Manager,OPEN,JORN superior but ROTHR is domestic
+R023,Programmatic,Canada coordination issues,3,4,12,High,1) Bilateral working groups 2) Data sharing agreements 3) Cost sharing MOU 4) Interoperability requirements,International Affairs,OPEN,Binational system requires close coordination
+R024,Programmatic,Changing threat environment,4,3,12,High,1) Flexible architecture 2) Technology insertion points 3) Capability spirals planned 4) Threat assessment updates,Requirements Manager,OPEN,Hypersonic and other new threats emerging
+R025,Operational,Recruitment/retention of skilled personnel,4,3,12,High,1) Competitive compensation 2) Training pipeline development 3) Contractor augmentation 4) Remote duty incentives,Operations Manager,OPEN,Arctic duty is hardship; RF skills shortage
+R026,Operational,Site security in remote locations,3,4,12,High,1) Automated operations (minimal manning) 2) Remote monitoring 3) Physical security systems 4) Coordination with local authorities,Security Manager,OPEN,Unmanned sites vulnerable to intrusion
+R027,Operational,Power outages in harsh environment,4,4,16,Critical,1) Redundant power generation 2) UPS for critical loads 3) Fuel storage for extended ops 4) Remote restart capability,Facilities Manager,OPEN,Grid power unreliable; diesel critical
+R028,Operational,Maintenance access in winter,4,3,12,High,1) Preventive maintenance in summer 2) Pre-positioned spares 3) Remote diagnostics 4) Modular design for quick replacement,Maintenance Manager,OPEN,No access Nov-Apr for some sites
+R029,Environmental,Habitat impact delays approvals,3,4,12,High,1) Avoid critical habitat areas 2) Seasonal construction restrictions 3) Wildlife monitoring 4) Mitigation measures,Environmental Lead,OPEN,Caribou migration polar bears etc.
+R030,Environmental,Climate change affects permafrost,3,4,12,High,1) Design for degrading permafrost 2) Active cooling systems 3) Monitoring and adaptive maintenance 4) Future climate projections,Civil Engineer,OPEN,Permafrost degradation accelerating
+R031,Safety,Personnel safety in extreme cold,4,4,16,Critical,1) Cold weather training 2) Buddy system requirement 3) Emergency shelters 4) Medical evacuation plans,Safety Officer,OPEN,Frostbite hypothermia risk significant
+R032,Safety,Aircraft collision with antenna arrays,2,5,10,High,1) FAA coordination 2) Antenna lighting 3) NOTAM issuance 4) Airspace restrictions if needed,Safety Officer,OPEN,Arrays are km-scale obstacles
+R033,Cybersecurity,Network intrusion or jamming,3,5,15,Critical,1) Encrypted communications 2) Cybersecurity monitoring 3) Penetration testing 4) Defensive cyber operations,CISO,OPEN,SATCOM links are vulnerable
+R034,Legal,Land use disputes or litigation,3,4,12,High,1) Clear title verification 2) Comprehensive agreements 3) Legal counsel review 4) Alternative site backup,Legal Counsel,OPEN,Complex land ownership in territories
+R035,Supply Chain,Component obsolescence during development,3,3,9,Medium,1) Technology refresh plan 2) Commercial item substitution 3) Lifetime buy for critical items 4) Open architecture for upgrades,Logistics Manager,OPEN,10-year development; components evolve
+R036,Supply Chain,Contractor performance issues,3,4,12,High,1) Experienced contractor selection 2) Performance incentives 3) Government oversight 4) Alternative source qualification,Contracts Manager,OPEN,Few firms have Arctic + OTHR experience
+R037,Schedule,Accelerated schedule labor shortages,4,4,16,Critical,1) Early labor sourcing 2) Shared resource pool across sites 3) Modular construction to reduce site man-hours,Operations Manager,OPEN,Concurrent sites triple concurrent labor demand
+R038,Technical,Lack of lessons learned from Site 1 (Accelerated path),4,3,12,High,1) Daily cross-site engineering syncs 2) Proactive risk identification 3) Strict quality control at first site,Chief Engineer,OPEN,Parallel construction prevents sequential improvement
+R039,Programmatic,Peak annual budget spikes (Accelerated path),4,4,16,Critical,1) Advance budget stabilization agreements 2) Flexible funding profiles 3) Incremental funding approach,Program Manager,OPEN,Parallel sites require 3x annual construction budget in peak years
+
+# RISK SUMMARY STATISTICS
+Category,Count,Avg Likelihood,Avg Impact,Avg Risk Score
+Technical,8,3.6,3.6,13.0
+Schedule,5,4.0,4.0,16.0
+Cost,5,3.4,3.8,13.0
+Performance,3,2.7,4.7,12.3
+Programmatic,5,3.2,3.4,10.8
+Operational,5,3.8,3.4,13.0
+Environmental,2,3.0,4.0,12.0
+Safety,2,3.0,4.5,13.0
+Cybersecurity,1,3.0,5.0,15.0
+Legal,1,3.0,4.0,12.0
+Supply Chain,2,3.0,3.5,10.5
+
+# RISK PRIORITY DISTRIBUTION
+Priority,Count,Percentage
+Critical (15-25),13,36%
+High (10-14),19,53%
+Medium (5-9),4,11%
+Low (1-4),0,0%
+
+# TOP 10 RISKS BY SCORE (Critical Path)
+Rank,Risk ID,Description,Score,Priority
+1,R010,Indigenous consultation delays or blocks sites,20,Critical
+2,R001,Arctic ionospheric modeling inaccuracy,16,Critical
+3,R007,Software integration complexity,16,Critical
+4,R009,Environmental review delays,16,Critical
+5,R014,Arctic site preparation cost overruns,16,Critical
+6,R017,Scope creep inflates requirements,16,Critical
+7,R027,Power outages in harsh environment,16,Critical
+8,R031,Personnel safety in extreme cold,16,Critical
+9,R002,Permafrost instability,15,Critical
+10,R005,Auroral clutter reduces performance,15,Critical
+
+# RISK MITIGATION INVESTMENT PRIORITIES
+Category,Recommended Investment,Rationale
+Indigenous Relations,High,R010 is highest risk; early engagement critical
+Arctic Engineering,High,R002 R014 R031 cluster around Arctic challenges
+Environmental Process,Medium,R009 R029 benefit from early prep but NEPA takes time
+Technology Maturation,Medium,R001 R005 R006 need algorithm development
+Program Management,Medium,R007 R017 R021 addressed through discipline
+
+# AI FACILITATOR TEAM NOTE
+AI-assisted risk identification:,Time saved: 1-2 weeks,Manual risk workshops and documentation
+Update instructions:,1. Add risks as identified 2. Update likelihood/impact quarterly 3. Track mitigation progress
+For govt version:,Classify risks by security level Add classified threat-based risks Include contractor-specific risks
+
+# RISK MANAGEMENT PROCESS
+Review Frequency,Monthly at minimum,Quarterly comprehensive updates
+Risk Board,Program Manager chairs,Technical leads attend
+Escalation Threshold,Score ≥15 or trending up,Report to senior leadership
+Risk Retirement,Score ≤4 and stable,Move to watch list
+New Risk Addition,Any team member can propose,Risk Board approves addition
+
+# ASSUMPTIONS IN RISK ASSESSMENT
+- Mature technology baseline (JORN Phase 6) reduces technical risk
+- Experienced program management team assigned
+- Strong Congressional support for NORAD modernization
+- Canada committed to partnership and cost sharing
+- No major geopolitical disruptions during development
+- Climate change projections moderate (not extreme scenario)

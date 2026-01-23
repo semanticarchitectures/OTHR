@@ -1,0 +1,153 @@
+# Arctic OTHR Cost Estimation Model
+# UNCLASSIFIED // PUBLIC RELEASE
+# Version 1.0 Framework - January 21, 2026
+#
+# INSTRUCTIONS:
+# - This CSV can be opened in Excel, Google Sheets, or similar
+# - Update BLUE cells (parameters) with refined values
+# - Formulas will auto-calculate totals
+# - All costs in millions of USD (FY2026 dollars)
+#
+# COST METHODOLOGY:
+# - Based on JORN Phase 6 ($1.2B AUD = ~$800M USD for 3 sites upgrade)
+# - Based on ROTHR historical costs (~$100-300M per site, 1990s dollars)
+# - Arctic multiplier applied (2-3x for remote sites)
+# - Parametric scaling by number of sites
+
+Category,Item,Unit,Qty,Unit Cost ($M),Subtotal ($M),Notes,Parameter Source
+PARAMETERS,,,,,,,
+,Number of Sites,sites,3,,,User adjustable,
+,Arctic Multiplier (site prep),factor,2.5,,,Baseline multiplier (2.5x); High-remote (4.0x),Nanisivik/CHARS Benchmarks
+,Technology Baseline,text,JORN Phase 6,,,JORN Phase 6 or ROTHR,
+,Development Required,yes/no,Minimal,,,Mature tech assumed,
+,,,,,,,
+DEVELOPMENT COSTS,,,,,,,
+,Systems Engineering,per program,1,30.0,30.0,Requirements analysis and design,Historical programs
+,Technology Development,per program,1,15.0,15.0,Arctic-specific adaptations,Minimal for mature tech
+,Test & Evaluation Planning,per program,1,10.0,10.0,T&E strategy and procedures,Standard for radar programs
+,Program Management,per program,1,20.0,20.0,PMO standup and overhead,3-4% of total program
+,,,,Subtotal:,75.0,,
+,,,,,,,
+SITE PREPARATION,,,,,,,
+,Site Survey & Selection,per site,3,5.0,15.0,Includes ionospheric characterization,Arctic requires extensive survey
+,Environmental Assessments,per site,3,8.0,24.0,NEPA compliance and permitting,Arctic + indigenous consultation
+,Permafrost Engineering,per site,3,12.0,36.0,Foundation design for frozen ground,Critical for Arctic
+,Site Preparation & Grading,per site,3,10.0,30.0,Land clearing and leveling,2.5x Arctic multiplier applied
+,Access Roads,per site,3,15.0,45.0,Construction of site access,Remote locations = high cost
+,,,,Subtotal:,150.0,,
+,,,,,,,
+INFRASTRUCTURE,,,,,,,
+,Power Infrastructure,per site,3,25.0,75.0,Grid connection + backup generation,Diesel backup for remote sites
+,Communications Infrastructure,per site,3,18.0,54.0,SATCOM terminals and fiber,Primary and redundant paths
+,Facilities Construction,per site,3,20.0,60.0,Operations buildings and shelters,Arctic-rated construction
+,Environmental Control Systems,per site,3,8.0,24.0,Heating/cooling for electronics,Extreme temperature range
+,Security Systems,per site,3,5.0,15.0,Perimeter security and monitoring,Remote site protection
+,,,,Subtotal:,228.0,,
+,,,,,,,
+RADAR HARDWARE,,,,,,,
+,Transmitter Systems,per site,3,45.0,135.0,HF transmitters and power amplifiers,MW-class systems
+,Transmitter Antenna Array,per site,3,35.0,105.0,2-3 km linear phased array,Large-scale construction
+,Receiver Systems,per site,3,55.0,165.0,Digital receivers and A/D converters,300-400 channels per site
+,Receiver Antenna Array,per site,3,40.0,120.0,2-3 km linear array with elements,Precision construction required
+,Signal Processing Hardware,per site,3,30.0,90.0,Real-time processing computers,High-performance computing
+,Ionospheric Sounders,per site,3,8.0,24.0,Vertical and oblique sounders,Essential for freq management
+,,,,Subtotal:,639.0,,
+,,,,,,,
+SOFTWARE & SYSTEMS,,,,,,,
+,Signal Processing Software,per program,1,40.0,40.0,Detection and tracking algorithms,Adapt existing algorithms
+,Frequency Management System,per program,1,25.0,25.0,Ionospheric modeling and optimization,Critical for Arctic ops
+,Command & Control Software,per program,1,30.0,30.0,Mission planning and operator interfaces,JORN-derived baseline
+,NORAD Interface Development,per program,1,15.0,15.0,Data fusion and track correlation,Link-16 or equivalent
+,System Integration,per program,1,35.0,35.0,Hardware/software integration and test,Complex multi-site system
+,,,,Subtotal:,145.0,,
+,,,,,,,
+OPERATIONS CONTROL CENTER,,,,,,,
+,OCC Facility Construction,per OCC,1,40.0,40.0,Operations center building,Assume CONUS location
+,OCC Equipment,per OCC,1,30.0,30.0,Displays consoles communications,24/7 operations capability
+,Backup OCC,per OCC,1,25.0,25.0,Redundant operations center,Continuity of operations
+,,,,Subtotal:,95.0,,
+,,,,,,,
+SUPPORTING SYSTEMS,,,,,,,
+,Ionospheric Monitor Network,per program,1,20.0,20.0,Regional ionosonde network expansion,Leverage existing where possible
+,Space Weather Integration,per program,1,8.0,8.0,Interface to NOAA and other sources,Real-time data feeds
+,Logistics & Supply Chain,per program,1,15.0,15.0,Spare parts and maintenance planning,Arctic supply chain complex
+,,,,Subtotal:,43.0,,
+,,,,,,,
+INTEGRATION & TEST,,,,,,,
+,Site-Level Testing,per site,3,12.0,36.0,Checkout and acceptance testing,Per-site validation
+,Multi-Site Integration,per program,1,25.0,25.0,Network-level testing,Critical for handoff coverage
+,NORAD Integration Testing,per program,1,15.0,15.0,Interface verification with NORAD,Operational testing
+,Operational Test & Evaluation,per program,1,20.0,20.0,IOT&E and certification,Final system validation
+,,,,Subtotal:,96.0,,
+,,,,,,,
+PROGRAM RESERVES,,,,,,,
+,Engineering Change Reserve,% of HW/SW,15%,98.4,98.4,Unforeseen technical issues,Standard 10-15% for development
+,Schedule Reserve,% of labor,10%,47.1,47.1,Delays and rework,Arctic weather impacts
+,Management Reserve,% of total,8%,118.8,118.8,Program-level contingency,Programmatic risks
+,,,,Subtotal:,264.3,,
+,,,,,,,
+ACQUISITION COST TOTALS,,,,,,,
+,Development,,,75.0,,,
+,Site Preparation,,,150.0,,,
+,Infrastructure,,,228.0,,,
+,Radar Hardware,,,639.0,,,
+,Software & Systems,,,145.0,,,
+,Operations Control Center,,,95.0,,,
+,Supporting Systems,,,43.0,,,
+,Integration & Test,,,96.0,,,
+,Reserves,,,264.3,,,
+,TOTAL ACQUISITION COST,,,1735.3,,,Per 3-site system
+,,,,,,,
+OPERATIONS & SUSTAINMENT,,,,,,,
+,Annual Personnel Costs,per year,1,25.0,25.0,Operators analysts maintainers,Assumes government personnel
+,Annual Maintenance,per year,1,35.0,35.0,Preventive and corrective maintenance,Parts and contractor support
+,Annual Utilities & Logistics,per year,1,15.0,15.0,Power fuel transportation,Arctic logistics premium
+,Annual Software Updates,per year,1,8.0,8.0,Algorithm improvements and patches,Continuous improvement
+,Annual Network Fees,per year,1,12.0,12.0,SATCOM and data communications,Commercial services
+,TOTAL ANNUAL O&S,per year,,95.0,95.0,,
+,,,,,,,
+20-YEAR LIFECYCLE COST,,,,,,,
+,Acquisition Cost (one-time),,,,1735.3,,
+,20 Years O&S (annual x 20),,,,1900.0,,
+,TOTAL 20-YEAR COST,,,,3635.3,,
+,,,,,,,
+COST SUMMARY BY WBS,,,,,,,
+,RDTE (Research Development Test & Eval),,,215.0,,,12.4%
+,Procurement (Hardware & Software),,,1025.0,,,59.1%
+,Military Construction (Facilities),,,398.0,,,22.9%
+,Program Reserves,,,97.3,,,5.6%
+,TOTAL ACQUISITION,,,1735.3,,,
+,,,,,,,
+COMPARISON TO HISTORICAL PROGRAMS,,,,,,,
+,JORN Phase 6 (3-site upgrade),$800M USD,,,Our estimate: $1735M,,"Higher due to new construction vs upgrade Arctic location"
+,ROTHR per site (1990s),$100-300M,,,Our estimate: $280M/site,,"Inflation-adjusted comparable"
+,Canada JORN purchase (1 system),$4000M USD,,,Our estimate: $1735M,,"Export premium technology transfer infrastructure development"
+,,,,,,,
+COST SENSITIVITIES,,,,,,,
+,If 3 sites parallel (Accelerated):,Increase,~$150M,,,Peak annual budget spike + logistics overlap,
+,If Arctic multiplier 1.5x instead of 2.5x:,Reduction,~$200M,,,Better site selection or logistics,
+,If Arctic multiplier 4.0x (Extreme Remote):,Increase,~$300M,,,Significant infrastructure build-out,
+,,,,,,,
+AI FACILITATOR TEAM NOTE,,,,,,,
+,AI-assisted cost estimation:,Time saved: 1-2 weeks,,,Manual WBS development and historical data compilation,
+,Update instructions:,1. Modify Qty and Unit Cost columns,,,2. Formulas will auto-recalculate,
+,For govt version:,Replace with actual vendor quotes,,,Add classified technology costs,
+
+# FORMULAS EXPLANATION (for spreadsheet implementation):
+# Subtotal = Qty × Unit Cost
+# TOTAL ACQUISITION = SUM(all subtotals) - Reserves calculated separately
+# TOTAL O&S = Annual O&S × 20 years
+# TOTAL LIFECYCLE = Acquisition + (Annual O&S × 20)
+#
+# NOTES ON ARCTIC MULTIPLIER:
+# - Site selection can reduce multiplier (choose accessible locations)
+# - Seasonal construction limits increase costs
+# - Permafrost engineering is unavoidable at high latitudes
+# - Logistics costs scale with remoteness (helicopter vs truck access)
+#
+# COST RISK FACTORS:
+# - Exchange rates if using foreign technology (JORN)
+# - Commodity prices (copper for antenna arrays fuel for remote ops)
+# - Labor availability in Arctic regions
+# - Environmental compliance delays
+# - Indigenous land use agreements

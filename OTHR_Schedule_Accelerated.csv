@@ -1,0 +1,86 @@
+# Arctic OTHR Program Schedule Model - ACCELERATED
+# UNCLASSIFIED // PUBLIC RELEASE
+# Version 1.0 Framework - January 21, 2026
+#
+# ACCELERATED STRATEGY:
+# - Concurrent site construction (Sites 1, 2, and 3 start in parallel)
+# - Fast-tracked environmental reviews (12 months vs 24 months)
+# - Overlapped integration and testing
+# - RISK: No lessons learned period between site deployments
+# - RISK: Higher peak annual budget requirements
+#
+# CRITICAL PATH ITEMS MARKED WITH (*)
+
+Phase,Task,Duration (months),Start Month,End Month,Dependencies,Critical Path,Notes
+PHASE 0: PROGRAM INITIATION,,,,,,,
+,Congressional Authorization,6,0,6,None,*,
+,Program Office Standup,3,3,6,Congressional Auth,,
+,Acquisition Strategy,4,6,10,Program Office,*,
+,,,,,,,
+PHASE 1: CONCEPT DEVELOPMENT,,,,,,,
+,Mission Analysis,4,6,10,None,*,Compressed analysis
+,Concept of Operations,4,8,12,Mission Analysis,*,
+,System Requirements,6,10,16,Mission Analysis,*,
+,Technology Assessment,4,10,14,None,,
+,Trade Studies,4,14,18,CONOPS + Requirements,*,
+,Preliminary Design,6,18,24,Requirements,*,
+,,,,,,,
+PHASE 2: SITE SELECTION & ENVIRONMENTAL,,,,,,,
+,Site Survey Planning,3,20,23,Preliminary Design,*,
+,Ionospheric Characterization,12,23,35,Site Survey,*,
+,Geotechnical Surveys,6,23,29,Site Survey,*,
+,Environmental Impact Statement,12,24,36,Site Selection,*,FAST-TRACK (High Risk)
+,Indigenous Consultations,12,24,36,Site Selection,*,Concurrent with EIS
+,Land Acquisition / Agreements,6,36,42,EIS + Consultations,*,
+,Site Selection Decision,1,42,43,All site studies,*,
+,,,,,,,
+PHASE 3: DETAILED DESIGN,,,,,,,
+,Detailed System Design,10,24,34,Preliminary Design,*,
+,Subsystem Design (TX),6,30,36,Detailed Design,,
+,Subsystem Design (RX),6,30,36,Detailed Design,,
+,Software Architecture,8,30,38,Detailed Design,*,
+,Interface Control Documents,4,34,38,Detailed Design,*,
+,Design Review,2,36,38,All detailed design,*,CDR
+,,,,,,,
+PHASE 4: PROCUREMENT,,,,,,,
+,Long-Lead Item Procurement,12,38,50,CDR,*,Compressed procurement
+,Transmitter Systems,12,42,54,Long-lead items,,
+,Receiver Systems,12,42,54,Long-lead items,,
+,Signal Processing Hardware,8,44,52,Long-lead items,,
+,Software Development,18,38,56,Software Arch,*,
+,OCC Equipment,10,42,52,Long-lead items,,
+,,,,,,,
+PHASE 5: SITE CONSTRUCTION (CONCURRENT),,,,,,,
+,Site 1 - Mobilization & Prep,6,43,49,Land acquisition,*,
+,Site 1 - Infrastructure,9,49,58,Prep,,
+,Site 1 - Installation,6,58,64,Infrastructure + Hardware,*,
+,Site 1 - Checkout,3,64,67,Installation,,
+,,,,,,,
+,Site 2 - Mobilization & Prep,6,43,49,Land acquisition,,Parallel with Site 1
+,Site 2 - Infrastructure,9,49,58,Prep,,
+,Site 2 - Installation,6,58,64,Infrastructure + Hardware,,
+,Site 2 - Checkout,3,64,67,Installation,,
+,,,,,,,
+,Site 3 - Mobilization & Prep,6,43,49,Land acquisition,,Parallel with Site 1
+,Site 3 - Infrastructure,9,49,58,Prep,,
+,Site 3 - Installation,6,58,64,Infrastructure + Hardware,,
+,Site 3 - Checkout,3,64,67,Installation,,
+,,,,,,,
+,OCC Construction & Activation,12,45,57,CDR,,
+,,,,,,,
+PHASE 6: INTEGRATION & TEST,,,,,,,
+,Multi-Site Integration Test,4,67,71,All sites checkout,*,Concurrent test
+,Full Network Integration,4,71,75,Multi-site,*,
+,NORAD Interface Test,3,75,78,Full network,*,
+,Operator Training,4,74,78,Systems available,,
+,,,,,,,
+PHASE 7: OPERATIONAL TEST & EVALUATION,,,,,,,
+,IOT&E Execution,4,78,82,Full network + training,*,Compressed IOT&E
+,IOT&E Report & Cert,2,82,84,IOT&E complete,*,
+,,,,,,,
+PROGRAM MILESTONES,,,,,,,
+,Milestone A,10,10,10,,,
+,Milestone B,24,24,24,,,
+,Milestone C,43,43,43,,,
+,Initial Operational Capability (IOC),67,67,67,,,5.6 years
+,Full Operational Capability (FOC),84,84,84,,,7.0 years

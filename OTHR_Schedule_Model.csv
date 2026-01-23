@@ -1,0 +1,165 @@
+# Arctic OTHR Program Schedule Model
+# UNCLASSIFIED // PUBLIC RELEASE
+# Version 1.0 Framework - January 21, 2026
+#
+# SCHEDULE METHODOLOGY:
+# - Based on JORN timeline (1986 decision → 2003 operational = 17 years with delays)
+# - Based on ROTHR timeline (~4 years but leveraged existing OTH-B)
+# - Assumes mature technology (JORN Phase 6 baseline)
+# - Arctic construction constraints (6-month construction season)
+# - Environmental review timelines (2-3 years typical)
+#
+# CRITICAL PATH ITEMS MARKED WITH (*)
+
+Phase,Task,Duration (months),Start Month,End Month,Dependencies,Critical Path,Notes
+PHASE 0: PROGRAM INITIATION,,,,,,,
+,Congressional Authorization,6,0,6,None,*,Funding approval and program charter
+,Program Office Standup,3,3,6,Congressional Auth,,PMO establishment and staffing
+,Acquisition Strategy,4,6,10,Program Office,*,Contract approach and sourcing strategy
+,,,,,,,
+PHASE 1: CONCEPT DEVELOPMENT,,,,,,,
+,Mission Analysis,6,6,12,None,*,NORAD requirements and threat analysis
+,Concept of Operations,6,8,14,Mission Analysis,*,Operational concept definition
+,System Requirements,8,10,18,Mission Analysis,*,Technical requirements document
+,Technology Assessment,6,10,16,None,,Evaluate JORN vs ROTHR baseline
+,Trade Studies,6,14,20,CONOPS + Requirements,*,Architecture and site count trades
+,Preliminary Design,8,18,26,Requirements,*,System architecture and interfaces
+,,,,,,,
+PHASE 2: SITE SELECTION & ENVIRONMENTAL,,,,,,,
+,Site Survey Planning,3,20,23,Preliminary Design,*,Identify candidate sites
+,Ionospheric Characterization,12,23,35,Site Survey,*,Site-specific propagation analysis
+,Geotechnical Surveys,9,23,32,Site Survey,*,Permafrost and foundation studies
+,Environmental Impact Statement,24,26,50,Site Selection,*,NEPA compliance (longest item)
+,Indigenous Consultations,18,26,44,Site Selection,*,Tribal consultations and agreements
+,Land Acquisition / Agreements,12,38,50,EIS + Consultations,*,Secure site access and rights
+,Site Selection Decision,1,50,51,All site studies,*,Final site approval milestone
+,,,,,,,
+PHASE 3: DETAILED DESIGN,,,,,,,
+,Detailed System Design,12,26,38,Preliminary Design,*,Engineering drawings and specs
+,Subsystem Design (TX),8,32,40,Detailed Design,,Transmitter detailed design
+,Subsystem Design (RX),8,32,40,Detailed Design,,Receiver detailed design
+,Software Architecture,10,32,42,Detailed Design,*,Signal processing and C2 software
+,Interface Control Documents,6,36,42,Detailed Design,*,Define all system interfaces
+,Design Review,2,40,42,All detailed design,*,Critical Design Review (CDR)
+,,,,,,,
+PHASE 4: PROCUREMENT,,,,,,,
+,Long-Lead Item Procurement,18,42,60,CDR,*,Antenna components HF amplifiers
+,Transmitter Systems,14,48,62,Long-lead items,,Fabrication and test
+,Receiver Systems,14,48,62,Long-lead items,,Fabrication and test
+,Signal Processing Hardware,10,50,60,Long-lead items,,Commercial servers and processors
+,Software Development,24,42,66,Software Arch,*,Algorithm development and coding
+,OCC Equipment,12,48,60,Long-lead items,,Displays consoles and infrastructure
+,,,,,,,
+PHASE 5: SITE CONSTRUCTION,,,,,,,
+,Site 1 - Mobilization,3,51,54,Land acquisition,*,Move equipment to remote site
+,Site 1 - Site Prep,6,54,60,Mobilization,*,Foundation and grading (summer only)
+,Site 1 - Infrastructure,9,60,69,Site Prep,*,Power comms and buildings
+,Site 1 - TX Installation,6,69,75,Infrastructure + TX systems,*,Transmitter array and electronics
+,Site 1 - RX Installation,6,69,75,Infrastructure + RX systems,*,Receiver array and electronics
+,Site 1 - Checkout,4,75,79,Installation,*,Initial testing and validation
+,,,,,,, 
+,Site 2 - Mobilization,3,63,66,Site 1 checkout + lessons,*,Second site deployment (delayed)
+,Site 2 - Site Prep,6,66,72,Mobilization,*,Parallel with Site 1 operations
+,Site 2 - Infrastructure,9,72,81,Site Prep,*,
+,Site 2 - TX Installation,6,81,87,Infrastructure + TX systems,*,Lessons learned from Site 1
+,Site 2 - RX Installation,6,81,87,Infrastructure + RX systems,*,
+,Site 2 - Checkout,4,87,91,Installation,*,
+,,,,,,,
+,Site 3 - Mobilization,3,75,78,Site 2 checkout + lessons,*,Third site deployment
+,Site 3 - Site Prep,6,78,84,Mobilization,*,
+,Site 3 - Infrastructure,9,84,93,Site Prep,*,
+,Site 3 - TX Installation,6,93,99,Infrastructure + TX systems,*,
+,Site 3 - RX Installation,6,93,99,Infrastructure + RX systems,*,
+,Site 3 - Checkout,4,99,103,Installation,*,
+,,,,,,,
+,OCC Construction,12,60,72,CDR,,CONUS location
+,OCC Activation,6,72,78,OCC construction + equipment,,Install systems and staff
+,,,,,,,
+PHASE 6: INTEGRATION & TEST,,,,,,,
+,Site 1 Integration Test,3,79,82,Site 1 checkout,,Full system validation
+,Site 2 Integration Test,3,91,94,Site 2 checkout,,Full system validation
+,Site 3 Integration Test,3,103,106,Site 3 checkout,*,Full system validation (critical path)
+,Multi-Site Integration,6,82,88,Sites 1&2 operational,,Network-level testing
+,Full Network Integration,6,106,112,Site 3 + multi-site,*,All 3 sites operating together
+,NORAD Interface Test,4,108,112,Full network,*,Integration with NORAD systems
+,Operator Training,6,106,112,Systems available,,Train operations personnel
+,,,,,,,
+PHASE 7: OPERATIONAL TEST & EVALUATION,,,,,,,
+,IOT&E Planning,6,100,106,Sites nearing completion,,Test plan development
+,IOT&E Execution,6,112,118,Full network + training,*,Operational testing
+,IOT&E Report,2,118,120,IOT&E complete,*,Results and certification
+,Operational Certification,1,120,121,IOT&E report,*,Final approval for operations
+,,,,,,,
+PROGRAM MILESTONES,,,,,,,
+,Milestone A: Program Initiation,0,10,10,,,Concept development approved
+,Milestone B: Development Start,0,26,26,,,Enter detailed design phase
+,Milestone C: Production Start,0,51,51,,,Begin construction
+,Initial Operational Capability (IOC),0,82,82,,,Site 1 operational
+,Full Operational Capability (FOC),0,121,121,,,All sites certified
+,,,,,,,
+SCHEDULE SUMMARY,,,,,,,
+,Program Start to IOC,82 months,0,82,,,(6.8 years)
+,Program Start to FOC,121 months,0,121,,,(10.1 years)
+,Construction Duration (Sites 1-3),70 months,51,121,,,(5.8 years)
+,Site 1 Only Timeline,79 months,0,79,,,(6.6 years to first site)
+,,,,,,,
+SCHEDULE CONSTRAINTS,,,,,,,
+,Arctic Construction Season,6 months/year (May-Oct),,,,,Limits site work
+,Environmental Review,24 months minimum,26,50,,,NEPA requirements
+,Ionospheric Characterization,12 months minimum,23,35,,,Seasonal variation data
+,Long-Lead Procurement,18 months typical,42,60,,,HF components specialty items
+,Indigenous Consultations,18+ months,26,44,,,Tribal engagement required
+,,,,,,,
+ACCELERATED SCHEDULE OPTION,,,,,,,
+,Concurrent Site Construction,Enable all 3 sites parallel,,,,,Risk: no lessons learned
+,Fast-Track Environmental,12-month EIS (risky),26,38,,,Requires pre-coordination
+,Commercial Site Selection,Use existing infrastructure,,,,,Reduces site prep time
+,ACCELERATED IOC,60 months,,,,,(5.0 years - high risk)
+,ACCELERATED FOC,84 months,,,,,(7.0 years - high risk)
+,,,,,,,
+SCHEDULE RISKS,,,,,,,
+,Environmental Review Delays,+6-12 months,,,,,Litigation or scope expansion
+,Indigenous Consultation Delays,+6-12 months,,,,,Agreement negotiations
+,Weather-Limited Construction,+6-12 months,,,,,Short construction seasons
+,Long-Lead Item Delays,+6-12 months,,,,,Supply chain disruptions
+,Software Development Overruns,+6-12 months,,,,,Complex signal processing
+,Integration Issues,+3-6 months,,,,,Multi-site coordination
+,Funding Gaps/Delays,+12-24 months,,,,,Budget instability
+,,,,,,,
+CRITICAL PATH ANALYSIS,,,,,,,
+,Critical path duration,121 months,0,121,,,(10.1 years)
+,Critical path slack,0 months,,,,,Zero margin for delays
+,Key drivers on critical path:,Environmental Review (24 mo),,,,,Longest single item
+,,Site 3 construction (52 mo),,,,,Sequential with Sites 1&2
+,,IOT&E (10 mo),,,,,Final certification
+,,,,,,,
+SCHEDULE COMPARISON,,,,,,,
+,JORN Phase 3 (1991-2003),144 months,,,,,Had major delays and issues
+,ROTHR prototype,~48 months,,,,,Leveraged existing tech
+,Our baseline estimate,121 months,,,,,Conservative for Arctic
+,Our accelerated estimate,84 months,,,,,Aggressive parallel execution
+,,,,,,,
+AI FACILITATOR TEAM NOTE,,,,,,,
+,AI-assisted schedule development:,Time saved: 1-2 weeks,,,,,Manual critical path analysis
+,Update instructions:,1. Modify Duration column,,,,,Dependencies auto-update
+,For govt version:,Add contractor proposals,,,,,Refine based on site surveys
+
+# SCHEDULE VISUALIZATION INSTRUCTIONS:
+# Import this CSV into project management software (MS Project Primavera GanttProject) or
+# Use Python/Excel to create Gantt chart visualization
+#
+# CRITICAL PATH ITEMS (marked with *):
+# These tasks directly impact the final completion date
+# Any delay in critical path items delays the entire program
+# Focus management attention on critical path risk mitigation
+#
+# PARALLEL VS SEQUENTIAL EXECUTION:
+# Baseline schedule: Sites built sequentially (lessons learned between sites)
+# Accelerated schedule: Sites built in parallel (higher risk but faster)
+#
+# KEY DECISION POINTS:
+# Month 10: Milestone A - Approve concept development
+# Month 26: Milestone B - Approve detailed design start
+# Month 51: Milestone C - Approve production/construction start
+# Month 82: IOC - First site operational
+# Month 121: FOC - Full system certified
